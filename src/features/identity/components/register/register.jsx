@@ -38,8 +38,10 @@ const Register = () => {
         <>
             <div className="text-center">
                 <img src={logo} style={{width: "100px"}} alt="logo"/>
-                <h1 className="h3">پلتفرم آموزش آنلاین</h1>
-                <p className="text-black-50 pt-2 fw-bold">جهت استفاده از ویژگی های پلتفرم آموزش آنلاین ثبت نام کنید</p>
+                <h1 className="h3">{t('register.title')}</h1>
+                <p className="text-black-50 pt-2 fw-bold">
+                    {t('register.introMessage')}
+                </p>
                 <p className="text-black-50 fw-bold">
                     قبلا ثبت نام کرده اید؟
                     <Link to="/login" className="btn-link me-2 text-decoration-none"> وارد شوید</Link>
@@ -48,7 +50,8 @@ const Register = () => {
                     <div className="card-body">
                         <form className="m-sm-4" onSubmit={handleSubmit(onSubmit)}>
                             <div className="mb-3">
-                                <label htmlFor="inputMobile" className="form-label text-black-50">موبایل</label>
+                                <label htmlFor="inputMobile"
+                                       className="form-label text-black-50 ">موبایل</label>
                                 <input {...register('mobile', {
                                     required: "موبایل الزامی است",
                                     minLength: 11, maxLength: 11
