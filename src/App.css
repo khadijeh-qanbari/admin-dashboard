@@ -1,62 +1,91 @@
-
-  @font-face {
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 300;
     src: url("/fonts/iranyekan/woff2/IRANYekanWebRegular.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 400;
     src: url("/fonts/iranyekan/woff2/IRANYekanWebMedium.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 500;
     src: url("/fonts/iranyekan/woff2/IRANYekanWebMedium.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 700;
     src: url("/fonts/iranyekan/woff2/IRANYekanWebBold.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 800;
     src: url("/fonts/iranyekan/woff2/IRANYekanWebExtraBold.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 900;
     src: url("/fonts/iranyekan/woff2/IRANYekanWebBlack.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: iranyekan;
     font-style: normal;
     font-weight: 1000;
     src: url("/fonts/iranyekan/woff2/iranyekanwebextrablack.woff2") format("woff2");
     /* FF39+,Chrome36+, Opera24+*/
-  }
+}
 
-body{margin:0;
-  min-height:100vh;
-  font-family:iranyekan;
-  font-size:1rem;
-  font-weight:400;
-  line-height:1.625;
-  color:#6c757d;
-  background-color:#f7f9fc;
-  -webkit-text-size-adjust:100%;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
+:root {
+    /*2d6bcf*/
+    --bs-body-bg: #f7f9fc; /* رنگ پس‌زمینه در حالت پیش‌فرض (لایت) */
+    --bs-body-color: #6c757d;
+    --bs-sidebar-background-color: #293042;
+    --bs-sidebar-color: #cdd1d3;
+    --bs-text-color: #293042;
+    --icon-color: #293042;
+    /*--bs-button-color: #6c757d;*/
+    /*--bs-button-bg-color: #6c757d;*/
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #121212; /* رنگ پس‌زمینه در حالت دارک */
+    --bs-body-color: #cdd1d3;
+    --bs-sidebar-background-color: #293042;
+    --bs-sidebar-color: #cdd1d3;
+    --bs-text-color: #cdd1d3;
+    --icon-color: #cdd1d3;
+    /*--bs-button-color: #6c757d;*/
+    /*--bs-button-bg-color: #6c757d;*/
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'iranyekan', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

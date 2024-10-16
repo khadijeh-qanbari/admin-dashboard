@@ -1,10 +1,12 @@
 import {Outlet} from "react-router-dom";
-import ChangeLanguage from "../components/change-language.jsx";
+import ChangeLanguage from "../components/language/change-language.jsx";
+import ChangeTheme from "../components/theme/change-theme.jsx";
 
 const IdentityLayout = () => {
     return (
         <div className="d-flex w-100 min-vh-100 flex-column">
-            <nav className="navbar shadow-sm ">
+            <nav className="navbar shadow-sm justify-content-start gap-3">
+                <ChangeTheme/>
                 <ChangeLanguage/>
             </nav>
             <main className="d-flex flex-grow-1 align-items-center justify-content-center">

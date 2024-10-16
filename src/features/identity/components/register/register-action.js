@@ -1,6 +1,6 @@
 // registerAction.js
 
-import {httpService} from "../../../../core/http-service.js";
+import {httpService} from "@core/http-service.js";
 
 export async function registerAction({request}) {
     const formData = await request.formData();

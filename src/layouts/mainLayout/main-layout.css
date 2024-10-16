@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    width: 300px; /* اندازه سایدبار در حالت باز */
+    transition: width 0.3s ease; /* انیمیشن تغییر اندازه */
+    overflow: hidden; /* جلوگیری از نمایش محتوای اضافی */
+    min-height: 100vh;
+    background-color: var(--bs-sidebar-background-color);
+    color: var(--bs-sidebar-color);
+}
+
+.sidebar.open {
+    width: 300px; /* اندازه سایدبار در حالت باز */
+}
+
+.sidebar:not(.open) {
+    width: 0; /* اندازه سایدبار در حالت بسته */
+}
+
+.icon {
+    color: var(--icon-color);
+}

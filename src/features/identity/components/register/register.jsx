@@ -1,5 +1,4 @@
 import logo from '@assets/images/logo.svg';
-import '../login/login.css';
 import {Link, useActionData, useNavigate, useNavigation, useRouteError, useSubmit} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import {useEffect} from "react";
@@ -39,19 +38,19 @@ const Register = () => {
             <div className="text-center">
                 <img src={logo} style={{width: "100px"}} alt="logo"/>
                 <h1 className="h3">{t('register.title')}</h1>
-                <p className="text-black-50 pt-2 fw-bold">
+                <p className="fw-bolder">
                     {t('register.introMessage')}
                 </p>
-                <p className="text-black-50 fw-bold">
+                <p className="fw-bolder">
                     قبلا ثبت نام کرده اید؟
                     <Link to="/login" className="btn-link me-2 text-decoration-none"> وارد شوید</Link>
                 </p>
-                <div className="card border-light shadow-sm mt-3">
+                <div className="card border-light shadow-lg mt-3">
                     <div className="card-body">
                         <form className="m-sm-4" onSubmit={handleSubmit(onSubmit)}>
                             <div className="mb-3">
                                 <label htmlFor="inputMobile"
-                                       className="form-label text-black-50 ">موبایل</label>
+                                       className="form-label">موبایل</label>
                                 <input {...register('mobile', {
                                     required: "موبایل الزامی است",
                                     minLength: 11, maxLength: 11
@@ -69,7 +68,7 @@ const Register = () => {
                                 )}
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="inputPassword" className="form-label text-black-50">رمز عبور</label>
+                                <label htmlFor="inputPassword" className="form-label">رمز عبور</label>
                                 <input {...register("password", {required: "رمز عبور الزامی است",})} type="password"
                                        className={`form-control form-control-lg ${errors.password && "is-invalid"}`}
                                        id="inputPassword"></input>
@@ -78,8 +77,8 @@ const Register = () => {
                                         className="text-end text-danger small fw-bolder mt-1">{errors.password?.message}</div>
                                 )}
                             </div>
-                            <div className="">
-                                <label htmlFor="confirmPassword" className="form-label text-black-50">تکرار رمز
+                            <div>
+                                <label htmlFor="confirmPassword" className="form-label">تکرار رمز
                                     عبور</label>
                                 <input {...register("confirmPassword", {
                                     required: "تکرار رمز عبور الزامی است", validate: value => {
@@ -102,7 +101,7 @@ const Register = () => {
                             <div className="d-flex justify-content-center mt-3">
                                 <button type="submit" disabled={isSubmitting}
                                         className="btn btn-primary btn-sm">
-                                    {t('register.register')}
+                                    {isSubmitting ? t('register.saving') : t('register.register')}
                                     {/*{isSubmitting ? "در حال انجام عملیات" : "ثبت نام کنید"}*/}
                                 </button>
                             </div>

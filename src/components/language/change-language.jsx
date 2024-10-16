@@ -1,14 +1,14 @@
 import usFlag from '@assets/images/us.png';
 import faFlag from '@assets/images/fa.png';
-import {useAppContext} from "../contexts/app/app-context.jsx";
+import {useAppContext} from "../../contexts/app/app-context.jsx";
 
 const ChangeLanguage = () => {
     const {language, changeLanguage} = useAppContext();
     return (
-        <div className="dropdown ms-3 me-3 mt-2">
+        <div className="dropdown">
             <a className="" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src={language === "fa" ? faFlag : usFlag} className="img-fluid rounded-circle"
-                     style={{width: "2rem", height: "2rem"}}
+                <img src={language === "fa" ? faFlag : usFlag} className=" rounded-circle"
+                     width="30" height="30"
                      alt="Change language"/>
             </a>
             <ul className={`dropdown-menu ${language === "fa" ? "dropdown-menu-end" : "dropdown-menu-start"}`}>
