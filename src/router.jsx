@@ -5,7 +5,12 @@ import IdentityLayout from "./layouts/identity-layout.jsx";
 import {registerAction} from "./features/identity/components/register/register-action.js";
 import {loginAction} from "./features/identity/components/login/login-action.js";
 import MainLayout from "./layouts/mainLayout/main-layout.jsx";
-import Courses from "./pages/cources.jsx";
+import Courses from "./pages/courses/cources.jsx";
+import {coursesLoader} from "./features/courses/loader/coursesLoader.js";
+import CourseCategories from "./pages/course-categories.jsx";
+import {courseDetailLoader} from "./features/courses/loader/course-detail-loader.js";
+import CourseDetails from "./features/courses/components/courseDetail/course-detail.jsx";
+import {categoriesLoader} from "./features/categories/loader/categories-loader.js";
 
 const router = createBrowserRouter([
     {
@@ -14,7 +19,18 @@ const router = createBrowserRouter([
         children: [
             {
                 element: <Courses/>,
-                index: true
+                index: true,
+                loader: coursesLoader
+            },
+            {
+                path: 'course-categories',
+                element: <CourseCategories/>,
+                loader: categoriesLoader
+            },
+            {
+                path: 'courses/:id',
+                element: <CourseDetails/>,
+                loader: courseDetailLoader
             }
         ]
     },

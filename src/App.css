@@ -56,23 +56,29 @@
 
 :root {
     /*2d6bcf*/
-    --bs-body-bg: #f7f9fc; /* رنگ پس‌زمینه در حالت پیش‌فرض (لایت) */
-    --bs-body-color: #6c757d;
-    --bs-sidebar-background-color: #293042;
-    --bs-sidebar-color: #cdd1d3;
-    --bs-text-color: #293042;
-    --icon-color: #293042;
+    /*--bs-heading-color: #fff;*/
+    --bs-body-bg: #e7e8ec !important; /* رنگ پس‌زمینه در حالت پیش‌فرض (لایت) */
+    --bs-body-color: #6c757d !important;
+    --bs-sidebar-background-color: #293042 !important;
+    --bs-sidebar-color: #cdd1d3 !important;
+    --bs-text-color: #293042 !important;
+    --icon-color: #293042 !important;
+    --bs-card-bg: #fff !important; /* تعریف متغیر */
+    --bs-card-color: #fff !important;
+    --bs-navbar-color: #fff !important;
     /*--bs-button-color: #6c757d;*/
     /*--bs-button-bg-color: #6c757d;*/
 }
 
 [data-bs-theme="dark"] {
-    --bs-body-bg: #121212; /* رنگ پس‌زمینه در حالت دارک */
-    --bs-body-color: #cdd1d3;
-    --bs-sidebar-background-color: #293042;
-    --bs-sidebar-color: #cdd1d3;
-    --bs-text-color: #cdd1d3;
-    --icon-color: #cdd1d3;
+    --bs-navbar-color: #202634 !important;
+    --bs-body-bg: #202634 !important; /* رنگ پس‌زمینه در حالت دارک */
+    --bs-body-color: #cdd1d3 !important;
+    --bs-sidebar-background-color: #293042 !important;
+    --bs-sidebar-color: #cdd1d3 !important;
+    --bs-text-color: #cdd1d3 !important;
+    --icon-color: #cdd1d3 !important;
+    --bs-card-bg: #293042 !important;
     /*--bs-button-color: #6c757d;*/
     /*--bs-button-bg-color: #6c757d;*/
 }
@@ -89,3 +95,4 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+

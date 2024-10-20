@@ -3,21 +3,34 @@
     position: relative;
 }
 
+
+.header-nav {
+    background-color: var(--bs-navbar-color);
+}
+
+.footer-main {
+    background-color: var(--bs-navbar-color);
+}
+
 .sidebar {
     width: 300px; /* اندازه سایدبار در حالت باز */
-    transition: width 0.3s ease; /* انیمیشن تغییر اندازه */
-    overflow: hidden; /* جلوگیری از نمایش محتوای اضافی */
-    min-height: 100vh;
+    transition: width 0.3s ease, opacity 0.3s ease; /* انیمیشن تغییر اندازه و شفافیت */
     background-color: var(--bs-sidebar-background-color);
     color: var(--bs-sidebar-color);
+    overflow: hidden; /* مخفی کردن هر چیزی که بیرون از سایز سایدبار است */
+    opacity: 1; /* در حالت باز سایدبار به صورت کامل نمایش داده می‌شود */
 }
 
 .sidebar.open {
     width: 300px; /* اندازه سایدبار در حالت باز */
+    opacity: 1;
 }
 
 .sidebar:not(.open) {
     width: 0; /* اندازه سایدبار در حالت بسته */
+    height: 0;
+    opacity: 0; /* شفافیت را به 0 کاهش می‌دهیم تا مخفی شود */
+    overflow: hidden; /* اطمینان از اینکه محتوا مخفی است */
 }
 
 .icon {

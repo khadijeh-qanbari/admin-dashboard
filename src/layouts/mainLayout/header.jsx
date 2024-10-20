@@ -7,15 +7,15 @@ import {FiMenu} from "react-icons/fi";
 const Header = () => {
     const {changeSidebar} = useAppContext();
     return (
-        <div className="d-flex justify-content-between">
-            <div className="navbar shadow-sm d-flex justify-content-start align-items-center gap-3">
+        <div className="header-nav d-flex justify-content-between shadow-sm">
+            <div className="navbar  d-flex justify-content-start align-items-center gap-3">
                 <button className="btn" type="button" onClick={changeSidebar}>
                     <FiMenu size={30} className="icon"/>
                 </button>
                 <ChangeLanguage/>
                 <ChangeTheme/>
             </div>
-            <button type="button" className="btn btn-outline-danger mt-3 mb-3 ms-5 me-5">
+            <button type="button" className="btn btn-outline-danger my-3 mx-2">
                 خارج شوید
             </button>
         </div>

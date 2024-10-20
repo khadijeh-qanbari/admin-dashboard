@@ -20,8 +20,8 @@ const Sidebar = () => {
                     <p>مدیریت دوره ها</p>
                 </div>
                 <div className="list-group">
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 rounded-0 fw-bolder pe-4 ps-4"
+                    <Link to={'/'} onClick={() => setActive(0)}
+                          className="list-group-item list-group-item-action border-0 rounded-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 0 ? colors.secondary : 'transparent',
                               color: active === 0 ? colors.textPrimary : colors.secondary
@@ -29,27 +29,27 @@ const Sidebar = () => {
                           aria-current="true">
                         <BsCameraVideo size={20}/> همه دوره ها
                     </Link>
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 fw-bolder  pe-4 ps-4"
+                    <Link to={'/course-categories'} onClick={() => setActive(1)}
+                          className="list-group-item list-group-item-action border-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 1 ? colors.secondary : 'transparent',
                               color: active === 1 ? colors.textPrimary : colors.secondary
                           }}>
                         <BsCameraVideo size={20}/> دسته بندی دوره ها</Link>
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 fw-bolder  pe-4 ps-4"
+                    <Link to="#" onClick={() => setActive(2)}
+                          className="list-group-item list-group-item-action border-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 2 ? colors.secondary : 'transparent',
                               color: active === 2 ? colors.textPrimary : colors.secondary
                           }}><BsPercent
                         size={20}/> تخفیف دوره ها</Link>
                 </div>
-                <div className="mt-5  pe-3 ps-3">
+                <div className="mt-5 px-3">
                     <p>مدیریت کاربرها </p>
                 </div>
                 <div className="list-group">
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 rounded-0 fw-bolder  pe-4 ps-4"
+                    <Link to="#" onClick={() => setActive(3)}
+                          className="list-group-item list-group-item-action border-0 rounded-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 3 ? colors.secondary : 'transparent',
                               color: active === 3 ? colors.textPrimary : colors.secondary
@@ -57,8 +57,8 @@ const Sidebar = () => {
                           aria-current="true">
                         <BsPerson size={20}/> مدیریت مدرس ها
                     </Link>
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 fw-bolder  pe-4 ps-4"
+                    <Link to="#" onClick={() => setActive(4)}
+                          className="list-group-item list-group-item-action border-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 4 ? colors.secondary : 'transparent',
                               color: active === 4 ? colors.textPrimary : colors.secondary
@@ -69,8 +69,8 @@ const Sidebar = () => {
                     <p>مدیریت بلاگ </p>
                 </div>
                 <div className="list-group">
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 rounded-0 fw-bolder  pe-4 ps-4"
+                    <Link to="#" onClick={() => setActive(5)}
+                          className="list-group-item list-group-item-action border-0 rounded-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 5 ? colors.secondary : 'transparent',
                               color: active === 5 ? colors.textPrimary : colors.secondary
@@ -78,8 +78,8 @@ const Sidebar = () => {
                           aria-current="true">
                         <BsTag size={20}/> مدیریت تگ ها
                     </Link>
-                    <Link to="#"
-                          className="list-group-item list-group-item-action border-0 fw-bolder  pe-4 ps-4"
+                    <Link to="#" onClick={() => setActive(6)}
+                          className="list-group-item list-group-item-action border-0 fw-bolder px-4"
                           style={{
                               backgroundColor: active === 6 ? colors.secondary : 'transparent',
                               color: active === 6 ? colors.textPrimary : colors.secondary
