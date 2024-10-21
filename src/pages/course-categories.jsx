@@ -15,9 +15,9 @@ const CourseCategories = () => {
                 <button className="btn btn-sm btn-primary ms-0 fw-bolder">افزودن دسته جدید<BsPlus/></button>
             </div>
             <Suspense fallback={<p className="text-info">در حال دریافت اطلاعات...</p>}>
-                <Await resolve={data.courses}>
+                <Await resolve={data.categories}>
                     {
-                        (loadedCourses) => <CategoryList courses={loadedCourses}/>
+                        (loadedCategories) => <CategoryList categories={loadedCategories}/>
                     }
                 </Await>
             </Suspense>

@@ -12,7 +12,7 @@ const Courses = () => {
                 <div>
                     همه دوره ها
                 </div>
-                <button className="btn btn-primary ms-0 fw-bolder">افزودن دوره جدید<BsPlus/></button>
+                <button className="btn btn-sm btn-primary ms-0 fw-bolder">افزودن دوره جدید<BsPlus/></button>
             </div>
             <Suspense fallback={<p className="text-info">در حال دریافت اطلاعات...</p>}>
                 <Await resolve={data.courses}>
