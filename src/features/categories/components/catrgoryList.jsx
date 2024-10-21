@@ -6,8 +6,7 @@ import {colors} from "@core/colors.js";
 import './categories-list.css';
 import {BsPencil, BsTrash} from "react-icons/bs";
 
-const CategoryList = ({categories}) => {
-    console.log(categories);
+const CategoryList = ({categories, deleteCategory}) => {
     const navigation = useNavigation();
     const {theme} = useAppContext();
     return (
@@ -36,6 +35,7 @@ const CategoryList = ({categories}) => {
                                                 <BsPencil fontSize={20} color={colors.secondary}/>
                                             </a>
                                             <a className='ms-3' onClick={() => {
+                                                deleteCategory(category.id)
                                             }}>
                                                 <BsTrash fontSize={20} color={colors.secondary}/>
                                             </a>
